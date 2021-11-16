@@ -1,0 +1,377 @@
+:root {
+
+    /*## Colors*/
+
+    /*### Primary*/
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /*### Neutral*/
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /*Note for text colors:*/
+
+    /*1. "Verified Graduate" has the same color as the person's name with 50% opacity*/
+    /*2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity*/
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+    .container {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+
+        .daniel__info,
+        .jonathan__info,
+        .patrick__info {
+            width: 86%;
+            height: auto;
+            margin: 0 auto;
+
+            padding: 7%;
+            background-color: var(--Moderate-violet);
+            border-radius: 6px;
+            background-image: url('../images/bg-pattern-quotation.svg');
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: top right 10%;
+
+            .header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+                margin-top: 0;
+
+                img {
+                    height: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                }
+
+                .personal__info {
+                    margin-left: 4vw;
+
+                    .name {
+                        color: var(--White);
+                        font-size: 13px;
+                        margin-bottom: 0;
+                    }
+
+                    .verified-graduate {
+                        margin-top: 0;
+                        color: var(--White);
+                        font-size: 13px;
+                        opacity: 50%;
+                    }
+                }
+
+
+
+
+            }
+
+            .comment {
+                height: auto;
+                margin-top: 0;
+
+                h2 {
+                    color: var(--White);
+                    font-size: 20px;
+                }
+
+                .quote {
+                    color: var(--White);
+                    opacity: 70%;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .daniel__info {
+            margin-top: 6%;
+        }
+
+        .jonathan__info {
+            margin-top: 3vh;
+            background-color: var(--Very-dark-grayish-blue);
+            background-image: none;
+        }
+
+        .patrick__info {
+            background-color: var(--Very-dark-blackish-blue);
+            background-image: none;
+            margin-top: 4vh;
+        }
+
+        .jeanette__info,
+        .kira__info {
+            background-color: var(--White);
+            width: 86%;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 4vh;
+            border-radius: 6px;
+
+            padding: 7%;
+
+            .header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+                margin-top: 0;
+
+                img {
+                    height: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+
+
+                }
+
+                .personal__info {
+                    margin-left: 4vw;
+
+                    .name {
+                        color: var(--Very-dark-grayish-blue);
+                        font-size: 13px;
+                        margin-bottom: 0;
+                    }
+
+                    .verified-graduate {
+                        margin-top: 0;
+                        color: var(--Very-dark-grayish-blue);
+                        font-size: 13px;
+                        opacity: 50%;
+                    }
+                }
+
+
+            }
+
+            .comment {
+                height: auto;
+                margin-top: 0;
+
+                h2 {
+                    color: var(--Very-dark-grayish-blue);
+                    font-size: 20px;
+                }
+
+                .quote {
+                    color: var(--Very-dark-grayish-blue);
+                    opacity: 70%;
+                    font-size: 13px;
+
+                }
+            }
+        }
+
+
+    }
+
+    @media (min-width:730px) and (max-width:1600px) {
+        .container {
+            // background-color: lightblue;
+            width: 65%;
+            height: auto;
+            // margin: 0 auto;
+            // display: flex;
+            // align-items: center;
+            // margin-top: 9%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // max-width: 50%;
+
+
+
+
+
+            main {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 20px;
+                grid-template-areas:
+                    "daniel  daniel jonathan  kira"
+                    "janette patrick patrick   kira";
+
+                display: grid;
+
+                .daniel__info {
+                    grid-area: daniel;
+                    margin-top: 5vh;
+
+                }
+
+                .jonathan__info {
+                    grid-area: jonathan;
+
+                    margin-top: 5vh;
+                }
+
+                .kira__info {
+                    grid-area: kira;
+                    margin-top: 5vh;
+                }
+
+                .jeanette__info {
+                    grid-area: janette;
+                    margin-top: 0;
+                }
+
+                .patrick__info {
+                    grid-area: patrick;
+                    margin-top: 0;
+                }
+
+                .daniel__info,
+                .jonathan__info,
+                .patrick__info {
+                    width: auto;
+
+
+                    padding: 1rem;
+
+
+                    .header {
+                        margin-top: 0;
+
+                        img {
+                            height: 40px;
+                            height: 40px;
+
+                        }
+
+                        .personal__info {
+                            margin-left: 2vw;
+
+
+                            // .name {
+                            //     color: var(--White);
+                            //     font-size: 13px;
+                            //     margin-bottom: 0;
+                            // }
+
+                            // .verified-graduate {
+                            //     margin-top: 0;
+                            //     color: var(--White);
+                            //     font-size: 13px;
+                            //     opacity: 50%;
+                            // }
+                        }
+
+
+
+
+                    }
+
+                    .comment {
+
+
+                        h2 {
+                            color: var(--White);
+                            font-size: 15px;
+                            margin-top: 0;
+                        }
+
+                        .quote {
+                            color: var(--White);
+                            opacity: 70%;
+                            font-size: 11px;
+                        }
+                    }
+                }
+
+                .jeanette__info,
+                .kira__info {
+
+                    padding: 1rem;
+
+                    .header {
+
+
+                        img {
+                            height: 40px;
+                            height: 40px;
+
+
+                        }
+
+                        .personal__info {
+                            margin-left: 2vw;
+
+                            // .name {
+                            //     color: var(--Very-dark-grayish-blue);
+                            //     font-size: 13px;
+                            //     margin-bottom: 0;
+                            // }
+
+                            // .verified-graduate {
+                            //     margin-top: 0;
+                            //     color: var(--Very-dark-grayish-blue);
+                            //     font-size: 13px;
+                            //     opacity: 50%;
+                            // }
+                        }
+
+
+                    }
+
+                    .comment {
+
+
+                        h2 {
+                            color: var(--Very-dark-grayish-blue);
+                            font-size: 15px;
+                        }
+
+                        .quote {
+                            color: var(--Very-dark-grayish-blue);
+                            opacity: 70%;
+                            font-size: 11px;
+
+                        }
+                    }
+                }
+
+            }
+
+           
+
+        }
+    }
+
+    @media (min-width:730px) and (max-width:1000px) {
+        .container {
+            // background-color: lightblue;
+            width: 80%;
+            height: auto;
+
+        }
+    }
+
+    @media (min-width:730px) and (max-width:820px) {
+        .container {
+            background-color: lightblue;
+            width: 90%;
+            height: auto;
+
+        }
+    }
+
+
+
+}

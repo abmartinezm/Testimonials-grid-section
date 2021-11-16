@@ -1,0 +1,276 @@
+:root {
+  /*## Colors*/
+  /*### Primary*/
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  /*### Neutral*/
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  /*Note for text colors:*/
+  /*1. "Verified Graduate" has the same color as the person's name with 50% opacity*/
+  /*2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity*/
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body .container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+body .container .daniel__info,
+body .container .jonathan__info,
+body .container .patrick__info {
+  width: 86%;
+  height: auto;
+  margin: 0 auto;
+  padding: 7%;
+  background-color: var(--Moderate-violet);
+  border-radius: 6px;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+body .container .daniel__info .header,
+body .container .jonathan__info .header,
+body .container .patrick__info .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+body .container .daniel__info .header img,
+body .container .jonathan__info .header img,
+body .container .patrick__info .header img {
+  height: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+body .container .daniel__info .header .personal__info,
+body .container .jonathan__info .header .personal__info,
+body .container .patrick__info .header .personal__info {
+  margin-left: 4vw;
+}
+body .container .daniel__info .header .personal__info .name,
+body .container .jonathan__info .header .personal__info .name,
+body .container .patrick__info .header .personal__info .name {
+  color: var(--White);
+  font-size: 13px;
+  margin-bottom: 0;
+}
+body .container .daniel__info .header .personal__info .verified-graduate,
+body .container .jonathan__info .header .personal__info .verified-graduate,
+body .container .patrick__info .header .personal__info .verified-graduate {
+  margin-top: 0;
+  color: var(--White);
+  font-size: 13px;
+  opacity: 50%;
+}
+body .container .daniel__info .comment,
+body .container .jonathan__info .comment,
+body .container .patrick__info .comment {
+  height: auto;
+  margin-top: 0;
+}
+body .container .daniel__info .comment h2,
+body .container .jonathan__info .comment h2,
+body .container .patrick__info .comment h2 {
+  color: var(--White);
+  font-size: 20px;
+}
+body .container .daniel__info .comment .quote,
+body .container .jonathan__info .comment .quote,
+body .container .patrick__info .comment .quote {
+  color: var(--White);
+  opacity: 70%;
+  font-size: 13px;
+}
+body .container .daniel__info {
+  margin-top: 6%;
+}
+body .container .jonathan__info {
+  margin-top: 3vh;
+  background-color: var(--Very-dark-grayish-blue);
+  background-image: none;
+}
+body .container .patrick__info {
+  background-color: var(--Very-dark-blackish-blue);
+  background-image: none;
+  margin-top: 4vh;
+}
+body .container .jeanette__info,
+body .container .kira__info {
+  background-color: var(--White);
+  width: 86%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 4vh;
+  border-radius: 6px;
+  padding: 7%;
+}
+body .container .jeanette__info .header,
+body .container .kira__info .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+body .container .jeanette__info .header img,
+body .container .kira__info .header img {
+  height: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+body .container .jeanette__info .header .personal__info,
+body .container .kira__info .header .personal__info {
+  margin-left: 4vw;
+}
+body .container .jeanette__info .header .personal__info .name,
+body .container .kira__info .header .personal__info .name {
+  color: var(--Very-dark-grayish-blue);
+  font-size: 13px;
+  margin-bottom: 0;
+}
+body .container .jeanette__info .header .personal__info .verified-graduate,
+body .container .kira__info .header .personal__info .verified-graduate {
+  margin-top: 0;
+  color: var(--Very-dark-grayish-blue);
+  font-size: 13px;
+  opacity: 50%;
+}
+body .container .jeanette__info .comment,
+body .container .kira__info .comment {
+  height: auto;
+  margin-top: 0;
+}
+body .container .jeanette__info .comment h2,
+body .container .kira__info .comment h2 {
+  color: var(--Very-dark-grayish-blue);
+  font-size: 20px;
+}
+body .container .jeanette__info .comment .quote,
+body .container .kira__info .comment .quote {
+  color: var(--Very-dark-grayish-blue);
+  opacity: 70%;
+  font-size: 13px;
+}
+@media (min-width: 730px) and (max-width: 1600px) {
+  body .container {
+    width: 65%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .container main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: "daniel  daniel jonathan  kira" "janette patrick patrick   kira";
+    display: grid;
+  }
+  body .container main .daniel__info {
+    grid-area: daniel;
+    margin-top: 5vh;
+  }
+  body .container main .jonathan__info {
+    grid-area: jonathan;
+    margin-top: 5vh;
+  }
+  body .container main .kira__info {
+    grid-area: kira;
+    margin-top: 5vh;
+  }
+  body .container main .jeanette__info {
+    grid-area: janette;
+    margin-top: 0;
+  }
+  body .container main .patrick__info {
+    grid-area: patrick;
+    margin-top: 0;
+  }
+  body .container main .daniel__info,
+body .container main .jonathan__info,
+body .container main .patrick__info {
+    width: auto;
+    padding: 1rem;
+  }
+  body .container main .daniel__info .header,
+body .container main .jonathan__info .header,
+body .container main .patrick__info .header {
+    margin-top: 0;
+  }
+  body .container main .daniel__info .header img,
+body .container main .jonathan__info .header img,
+body .container main .patrick__info .header img {
+    height: 40px;
+    height: 40px;
+  }
+  body .container main .daniel__info .header .personal__info,
+body .container main .jonathan__info .header .personal__info,
+body .container main .patrick__info .header .personal__info {
+    margin-left: 2vw;
+  }
+  body .container main .daniel__info .comment h2,
+body .container main .jonathan__info .comment h2,
+body .container main .patrick__info .comment h2 {
+    color: var(--White);
+    font-size: 15px;
+    margin-top: 0;
+  }
+  body .container main .daniel__info .comment .quote,
+body .container main .jonathan__info .comment .quote,
+body .container main .patrick__info .comment .quote {
+    color: var(--White);
+    opacity: 70%;
+    font-size: 11px;
+  }
+  body .container main .jeanette__info,
+body .container main .kira__info {
+    padding: 1rem;
+  }
+  body .container main .jeanette__info .header img,
+body .container main .kira__info .header img {
+    height: 40px;
+    height: 40px;
+  }
+  body .container main .jeanette__info .header .personal__info,
+body .container main .kira__info .header .personal__info {
+    margin-left: 2vw;
+  }
+  body .container main .jeanette__info .comment h2,
+body .container main .kira__info .comment h2 {
+    color: var(--Very-dark-grayish-blue);
+    font-size: 15px;
+  }
+  body .container main .jeanette__info .comment .quote,
+body .container main .kira__info .comment .quote {
+    color: var(--Very-dark-grayish-blue);
+    opacity: 70%;
+    font-size: 11px;
+  }
+}
+@media (min-width: 730px) and (max-width: 1000px) {
+  body .container {
+    width: 80%;
+    height: auto;
+  }
+}
+@media (min-width: 730px) and (max-width: 820px) {
+  body .container {
+    background-color: lightblue;
+    width: 90%;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
