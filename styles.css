@@ -267,7 +267,6 @@ body .container main .kira__info .comment .quote {
 }
 @media (min-width: 730px) and (max-width: 820px) {
   body .container {
-    background-color: lightblue;
     width: 90%;
     height: auto;
   }
